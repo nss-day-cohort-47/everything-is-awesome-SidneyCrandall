@@ -5,28 +5,53 @@ import { makeLegoList } from './legos/LegoList.js';
 const navElement = document.querySelector("nav");
 
 navElement.addEventListener("click", (event) => {
-	if (event.target.id === "showBlue") {
-		filterLegos("Blue")
-	} else if (event.target.id === "showAll") {
-		makeLegoList(useLegos())
-	}
+    if (event.target.id === "showRed") {
+        filterLegos("Red")
+    } else if (event.target.id === "showAll") {
+        makeLegoList(useLegos())
+    }
 })
 
+navElement.addEventListener("click", (event) => {
+    if (event.target.id === "showGreen") {
+        filterLegos("Green")
+    } else if (event.target.id === "showAll") {
+        makeLegoList(useLegos())
+    }
+})
+
+
+/*navElement.addEventListener("change", event => {
+    if (event.target.id === "showSolid") {
+        filterLegos("Solid")
+    } else if (event.target.id === "showAllMaterial") {
+        makeLegoList(useLegos())
+        console.log("showSolid")
+    }
+    if (event.target.id === "showTransparent") {
+        filterLegos("Transparent")
+    } else if (event.target.id === "showAllMaterial") {
+        makeLegoList(useLegos())
+        console.log("showParents")
+    }
+})*/
+
+
 const filterLegos = (whatFilter) => {
-	const filterArray = useLegos().filter(singleLego => {
-		if (singleLego.LegoName.includes(whatFilter)) {
-			return singleLego;
-		}
-	})
-	makeLegoList(filterArray);
+    const filterArray = useLegos().filter(singleLego => {
+        if (singleLego.LegoName.includes(whatFilter)) {
+            return singleLego;
+        }
+    })
+    makeLegoList(filterArray);
 }
 
 
 const startEIA = () => {
-	loadLegos()
-	.then(legoArray => {
-		makeLegoList(legoArray)
-	})
+    loadLegos()
+        .then(legoArray => {
+            makeLegoList(legoArray)
+        })
 
 }
 
