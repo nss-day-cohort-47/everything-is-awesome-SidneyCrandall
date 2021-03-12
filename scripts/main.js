@@ -49,6 +49,23 @@ const filterLegos = (whatFilter) => {
     makeLegoList(filterArray);
 }
 
+const search = document.querySelector("#searchId")
+
+search.addEventListener("click", (event) => {
+    if (event.target.id === "searchId") {
+        const search = document.querySelector("#search");
+        filterLegosById(search.value)
+    }
+})
+
+const filterLegosById = (whatFilter) => {
+    const filterArray = useLegos().filter(singleLego => {
+        if (singleLego.LegoId.includes(whatFilter)) {
+            return singleLego;
+        }
+    })
+    makeLegoList(filterArray);
+}
 
 const startEIA = () => {
     loadLegos()
