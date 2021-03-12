@@ -21,3 +21,7 @@ export const LegoDetail = (brick) => {
         return block;
     }
 }
+
+///Lego details for displaying on DOM. 
+///toUpperCase() was added to the Lego names to capitalize all letters of the Lego Name.
+//Notes detail was also added. The objects correspond to that of JSON data

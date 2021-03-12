@@ -7,15 +7,19 @@
     <title>Everything is Awesome</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+<!--Begin Display of Legos-->
 
 <body>
     <header>
         <h1>Everything is Awesome</h1><small>The Builders' Blocks Details</small>
         <nav>
+
+            <!--Buttons for color Filter-->
             <button id="showAll">Show All Legos</button>
             <button id="showRed">Show Red Legos</button>
             <button id="showGreen">Show Green Legos</button>
 
+            <!--Dropdown box for Lego Material-->
             <div class="dropdown">
                 <select id="showMaterial" name="showMAterial">
                   <option value="Solid">Solid</option>
@@ -32,6 +36,7 @@
                 </select>
             </div>
 
+            <!--A search feature that displays all Legos that correspond to that number-->
             <div>
                 <input id="search" type="text" placeholder="Search Lego Ids..." />
                 <button id="searchId">Search</button>

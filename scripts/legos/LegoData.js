@@ -12,3 +12,5 @@ export const loadLegos = () => {
             return legoArray.LegoColorss;
         })
 };
+
+//Fetch() to Json
