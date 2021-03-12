@@ -5,6 +5,7 @@ export const LegoDetail = (brick) => {
     let block = `<section class="block-wrapper" style="background-color:#${brick.ColorHex}">
               <h3>Name: ${brick.LegoName.toUpperCase()}</h3>
               <div class="block-years">Manufactured ${brick.YearFrom} - ${brick.YearTo}</div>
+              <div class="block-material">Material: ${brick.Material}</div>
               <div class="block-notes">Notes: ${brick.Notes}</div>
               </section>
               `;

@@ -20,22 +20,25 @@ navElement.addEventListener("click", (event) => {
     }
 })
 
-
-/*navElement.addEventListener("change", event => {
-    if (event.target.id === "showSolid") {
-        filterLegos("Solid")
-    } else if (event.target.id === "showAllMaterial") {
+const materialElement = document.querySelector("#showMaterial")
+materialElement.addEventListener("change", (event) => {
+    if (event.target.id === "showMaterial") {
+        const materialType = (event.target.value);
+        filterMaterial(materialType);
+    } else if (event.target.id === "showAll") {
         makeLegoList(useLegos())
-        console.log("showSolid")
     }
-    if (event.target.id === "showTransparent") {
-        filterLegos("Transparent")
-    } else if (event.target.id === "showAllMaterial") {
-        makeLegoList(useLegos())
-        console.log("showParents")
-    }
-})*/
+})
 
+
+const filterMaterial = (whatFilter) => {
+    const filterArray = useLegos().filter(singleLego => {
+        if (singleLego.Material.includes(whatFilter)) {
+            return singleLego;
+        }
+    })
+    makeLegoList(filterArray);
+}
 
 const filterLegos = (whatFilter) => {
     const filterArray = useLegos().filter(singleLego => {

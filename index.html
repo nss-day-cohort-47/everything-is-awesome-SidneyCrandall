@@ -15,23 +15,28 @@
             <button id="showAll">Show All Legos</button>
             <button id="showRed">Show Red Legos</button>
             <button id="showGreen">Show Green Legos</button>
-            <select id="showAllMaterial">
-              <option id="showSolid">Solid</option>
-              <option id="showTransparent">Transparent</option>
-              <option id="showPearl">Pearl</option>
-              <option id="showChrome">Chrome</option>
-              <option id="showMetallic">Metallic</option>
-              <option id="showMilky">Milky</option>
-              <option id="showGlitter">Glitter</option>
-              <option id="showSpeckle">Speckle</option>
-              <option id="showInk">Ink</option>
-              <option id="showModulex">Modulex</option>
-              <option id="showProcess">Process</option>
-            </select>
+
+            <div class="dropdown">
+                <select id="showMaterial" name="showMAterial">
+                  <option value="Solid">Solid</option>
+                  <option value="Transparent">Transparent</option>
+                  <option value="Pearl">Pearl</option>
+                  <option value="Chrome">Chrome</option>
+                  <option value="Metallic">Metallic</option>
+                  <option value="Milky">Milky</option>
+                  <option value="Glitter">Glitter</option>
+                  <option value="Speckle">Speckle</option>
+                  <option value="Ink">Ink</option>
+                  <option value="Modulex">Modulex</option>
+                  <option value="Process">Process</option>
+                </select>
+            </div>
+
         </nav>
     </header>
     <main>
         <section id="all-legos"></section>
+
     </main>
     <script src="scripts/main.js" type="module"></script>
 </body>
