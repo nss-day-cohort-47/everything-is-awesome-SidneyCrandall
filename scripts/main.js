@@ -76,3 +76,8 @@ const startEIA = () => {
 }
 
 startEIA();
+
+
+/// EventListeners added to make page dyanmic and filter data. 
+
+///The .filter() for the search box will filter out all Legos that correspond to that LegoId. Mulitple Legos will display.
